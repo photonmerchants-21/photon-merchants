@@ -1,0 +1,1076 @@
+[
+  {
+    "id": "cbd-cbd-delivery",
+    "corridor": "CBD",
+    "area": "CBD",
+    "fee": 150
+  },
+  {
+    "id": "outer-ring-road-lucky-summer",
+    "corridor": "Outer Ring Road",
+    "area": "Lucky Summer",
+    "fee": 350
+  },
+  {
+    "id": "thika-road-ngara",
+    "corridor": "Thika Road",
+    "area": "Ngara",
+    "fee": 250
+  },
+  {
+    "id": "juja-road-ngara",
+    "corridor": "Juja Road",
+    "area": "Ngara",
+    "fee": 200
+  },
+  {
+    "id": "mombasa-road-nyayo-stadium",
+    "corridor": "Mombasa Road",
+    "area": "Nyayo Stadium",
+    "fee": 300
+  },
+  {
+    "id": "waiyaki-way-chiromo",
+    "corridor": "Waiyaki Way",
+    "area": "Chiromo",
+    "fee": 350
+  },
+  {
+    "id": "outer-ring-road-baba-ndogo",
+    "corridor": "Outer Ring Road",
+    "area": "Baba Ndogo",
+    "fee": 350
+  },
+  {
+    "id": "thika-road-pangani",
+    "corridor": "Thika Road",
+    "area": "Pangani",
+    "fee": 300
+  },
+  {
+    "id": "juja-road-equity",
+    "corridor": "Juja Road",
+    "area": "Equity",
+    "fee": 250
+  },
+  {
+    "id": "mombasa-road-bunyala-road",
+    "corridor": "Mombasa Road",
+    "area": "Bunyala Road",
+    "fee": 300
+  },
+  {
+    "id": "waiyaki-way-riverside",
+    "corridor": "Waiyaki Way",
+    "area": "Riverside",
+    "fee": 350
+  },
+  {
+    "id": "outer-ring-road-pioneer-estate",
+    "corridor": "Outer Ring Road",
+    "area": "Pioneer Estate",
+    "fee": 350
+  },
+  {
+    "id": "thika-road-drive-inn",
+    "corridor": "Thika Road",
+    "area": "Drive inn",
+    "fee": 400
+  },
+  {
+    "id": "juja-road-parkroad",
+    "corridor": "Juja Road",
+    "area": "Parkroad",
+    "fee": 300
+  },
+  {
+    "id": "mombasa-road-lusaka-road",
+    "corridor": "Mombasa Road",
+    "area": "Lusaka Road",
+    "fee": 300
+  },
+  {
+    "id": "waiyaki-way-westlands",
+    "corridor": "Waiyaki Way",
+    "area": "Westlands",
+    "fee": 400
+  },
+  {
+    "id": "outer-ring-road-uhuru-estate",
+    "corridor": "Outer Ring Road",
+    "area": "Uhuru Estate",
+    "fee": 350
+  },
+  {
+    "id": "thika-road-allsops",
+    "corridor": "Thika Road",
+    "area": "Allsops",
+    "fee": 400
+  },
+  {
+    "id": "juja-road-kariokor",
+    "corridor": "Juja Road",
+    "area": "Kariokor",
+    "fee": 200
+  },
+  {
+    "id": "mombasa-road-nairobi-west",
+    "corridor": "Mombasa Road",
+    "area": "Nairobi West",
+    "fee": 300
+  },
+  {
+    "id": "waiyaki-way-westgate",
+    "corridor": "Waiyaki Way",
+    "area": "Westgate",
+    "fee": 400
+  },
+  {
+    "id": "outer-ring-road-buruburu",
+    "corridor": "Outer Ring Road",
+    "area": "Buruburu",
+    "fee": 400
+  },
+  {
+    "id": "thika-road-rosters-garden",
+    "corridor": "Thika Road",
+    "area": "Rosters/Garden",
+    "fee": 400
+  },
+  {
+    "id": "juja-road-pumwani",
+    "corridor": "Juja Road",
+    "area": "Pumwani",
+    "fee": 250
+  },
+  {
+    "id": "mombasa-road-capital-center",
+    "corridor": "Mombasa Road",
+    "area": "Capital Center",
+    "fee": 350
+  },
+  {
+    "id": "waiyaki-way-abc",
+    "corridor": "Waiyaki Way",
+    "area": "ABC",
+    "fee": 450
+  },
+  {
+    "id": "outer-ring-road-mtindwa",
+    "corridor": "Outer Ring Road",
+    "area": "Mtindwa",
+    "fee": 400
+  },
+  {
+    "id": "thika-road-trm-lumumba",
+    "corridor": "Thika Road",
+    "area": "TRM/Lumumba",
+    "fee": 450
+  },
+  {
+    "id": "juja-road-eastleigh",
+    "corridor": "Juja Road",
+    "area": "Eastleigh",
+    "fee": 300
+  },
+  {
+    "id": "mombasa-road-south-b",
+    "corridor": "Mombasa Road",
+    "area": "South B",
+    "fee": 350
+  },
+  {
+    "id": "waiyaki-way-peponi-road",
+    "corridor": "Waiyaki Way",
+    "area": "Peponi Road",
+    "fee": 450
+  },
+  {
+    "id": "outer-ring-road-umoja-1-2",
+    "corridor": "Outer Ring Road",
+    "area": "Umoja 1&2",
+    "fee": 450
+  },
+  {
+    "id": "thika-road-usiu-thome",
+    "corridor": "Thika Road",
+    "area": "USIU/Thome",
+    "fee": 500
+  },
+  {
+    "id": "mombasa-road-southc",
+    "corridor": "Mombasa Road",
+    "area": "SouthC",
+    "fee": 400
+  },
+  {
+    "id": "waiyaki-way-spring-valley",
+    "corridor": "Waiyaki Way",
+    "area": "Spring Valley",
+    "fee": 450
+  },
+  {
+    "id": "outer-ring-road-kariobangi-north",
+    "corridor": "Outer Ring Road",
+    "area": "Kariobangi North",
+    "fee": 450
+  },
+  {
+    "id": "thika-road-kasarani",
+    "corridor": "Thika Road",
+    "area": "Kasarani",
+    "fee": 500
+  },
+  {
+    "id": "juja-road-moi-airbase-mai",
+    "corridor": "Juja Road",
+    "area": "Moi Airbase Mai",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-nexgen-mall",
+    "corridor": "Mombasa Road",
+    "area": "Nexgen mall",
+    "fee": 350
+  },
+  {
+    "id": "waiyaki-way-kangemi",
+    "corridor": "Waiyaki Way",
+    "area": "Kangemi",
+    "fee": 500
+  },
+  {
+    "id": "outer-ring-road-savannah",
+    "corridor": "Outer Ring Road",
+    "area": "Savannah",
+    "fee": 450
+  },
+  {
+    "id": "thika-road-mirema-zimmer",
+    "corridor": "Thika Road",
+    "area": "Mirema/Zimmer",
+    "fee": 600
+  },
+  {
+    "id": "juja-road-mathare",
+    "corridor": "Juja Road",
+    "area": "Mathare",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-likoni-road",
+    "corridor": "Mombasa Road",
+    "area": "Likoni road",
+    "fee": 350
+  },
+  {
+    "id": "waiyaki-way-loresho",
+    "corridor": "Waiyaki Way",
+    "area": "Loresho",
+    "fee": 600
+  },
+  {
+    "id": "outer-ring-road-embakasi",
+    "corridor": "Outer Ring Road",
+    "area": "Embakasi",
+    "fee": 500
+  },
+  {
+    "id": "thika-road-githurai-44-45",
+    "corridor": "Thika Road",
+    "area": "Githurai 44/45",
+    "fee": 600
+  },
+  {
+    "id": "juja-road-huruma",
+    "corridor": "Juja Road",
+    "area": "Huruma",
+    "fee": 400
+  },
+  {
+    "id": "mombasa-road-airtel",
+    "corridor": "Mombasa Road",
+    "area": "Airtel",
+    "fee": 400
+  },
+  {
+    "id": "waiyaki-way-thigiri-ridge",
+    "corridor": "Waiyaki Way",
+    "area": "Thigiri Ridge",
+    "fee": 600
+  },
+  {
+    "id": "outer-ring-road-baraka",
+    "corridor": "Outer Ring Road",
+    "area": "Baraka",
+    "fee": 500
+  },
+  {
+    "id": "thika-road-maji-mazuri",
+    "corridor": "Thika Road",
+    "area": "Maji Mazuri",
+    "fee": 700
+  },
+  {
+    "id": "mombasa-road-the-panari",
+    "corridor": "Mombasa Road",
+    "area": "The Panari",
+    "fee": 400
+  },
+  {
+    "id": "waiyaki-way-kitusuru",
+    "corridor": "Waiyaki Way",
+    "area": "Kitusuru",
+    "fee": 700
+  },
+  {
+    "id": "outer-ring-road-nyayo-estate",
+    "corridor": "Outer Ring Road",
+    "area": "Nyayo Estate",
+    "fee": 500
+  },
+  {
+    "id": "thika-road-kahawa-wendani",
+    "corridor": "Thika Road",
+    "area": "Kahawa Wendani",
+    "fee": 700
+  },
+  {
+    "id": "mombasa-road-tulip",
+    "corridor": "Mombasa Road",
+    "area": "Tulip",
+    "fee": 450
+  },
+  {
+    "id": "waiyaki-way-lower-kabete-u",
+    "corridor": "Waiyaki Way",
+    "area": "Lower Kabete (U",
+    "fee": 800
+  },
+  {
+    "id": "outer-ring-road-saika",
+    "corridor": "Outer Ring Road",
+    "area": "Saika",
+    "fee": 500
+  },
+  {
+    "id": "thika-road-mwihoko",
+    "corridor": "Thika Road",
+    "area": "Mwihoko",
+    "fee": 800
+  },
+  {
+    "id": "kiambu-road-dci",
+    "corridor": "Kiambu Road",
+    "area": "DCI",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-sameer",
+    "corridor": "Mombasa Road",
+    "area": "Sameer",
+    "fee": 450
+  },
+  {
+    "id": "waiyaki-way-kabete-gardens",
+    "corridor": "Waiyaki Way",
+    "area": "Kabete Gardens",
+    "fee": 800
+  },
+  {
+    "id": "outer-ring-road-komarock",
+    "corridor": "Outer Ring Road",
+    "area": "Komarock",
+    "fee": 600
+  },
+  {
+    "id": "thika-road-mwiki",
+    "corridor": "Thika Road",
+    "area": "Mwiki",
+    "fee": 700
+  },
+  {
+    "id": "kiambu-road-balozi-estate",
+    "corridor": "Kiambu Road",
+    "area": "Balozi Estate",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-general-motors",
+    "corridor": "Mombasa Road",
+    "area": "General Motors",
+    "fee": 450
+  },
+  {
+    "id": "waiyaki-way-uthiru",
+    "corridor": "Waiyaki Way",
+    "area": "Uthiru",
+    "fee": 600
+  },
+  {
+    "id": "outer-ring-road-njiru",
+    "corridor": "Outer Ring Road",
+    "area": "Njiru",
+    "fee": 800
+  },
+  {
+    "id": "thika-road-ruiru-bypass",
+    "corridor": "Thika Road",
+    "area": "Ruiru bypass",
+    "fee": 800
+  },
+  {
+    "id": "kiambu-road-muthaiga-north",
+    "corridor": "Kiambu Road",
+    "area": "Muthaiga North",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-icd-road",
+    "corridor": "Mombasa Road",
+    "area": "ICD Road",
+    "fee": 450
+  },
+  {
+    "id": "waiyaki-way-uthiru-cooperati",
+    "corridor": "Waiyaki Way",
+    "area": "Uthiru Cooperative",
+    "fee": 750
+  },
+  {
+    "id": "outer-ring-road-mihango",
+    "corridor": "Outer Ring Road",
+    "area": "Mihango",
+    "fee": 800
+  },
+  {
+    "id": "thika-road-ruru-town",
+    "corridor": "Thika Road",
+    "area": "Ruru Town",
+    "fee": 900
+  },
+  {
+    "id": "kiambu-road-ridgeways",
+    "corridor": "Kiambu Road",
+    "area": "Ridgeways",
+    "fee": 400
+  },
+  {
+    "id": "mombasa-road-libra-house",
+    "corridor": "Mombasa Road",
+    "area": "Libra House",
+    "fee": 450
+  },
+  {
+    "id": "waiyaki-way-87-87-junction",
+    "corridor": "Waiyaki Way",
+    "area": "87/87 Junction",
+    "fee": 800
+  },
+  {
+    "id": "outer-ring-road-chokaa",
+    "corridor": "Outer Ring Road",
+    "area": "Chokaa",
+    "fee": 800
+  },
+  {
+    "id": "thika-road-kenyatta-road",
+    "corridor": "Thika Road",
+    "area": "Kenyatta Road",
+    "fee": 1100
+  },
+  {
+    "id": "kiambu-road-fourways-junction",
+    "corridor": "Kiambu Road",
+    "area": "Fourways Junction",
+    "fee": 400
+  },
+  {
+    "id": "mombasa-road-maasai-road",
+    "corridor": "Mombasa Road",
+    "area": "Maasai Road",
+    "fee": 450
+  },
+  {
+    "id": "waiyaki-way-kinoo-muthiga",
+    "corridor": "Waiyaki Way",
+    "area": "Kinoo/Muthiga",
+    "fee": 800
+  },
+  {
+    "id": "outer-ring-road-utawala",
+    "corridor": "Outer Ring Road",
+    "area": "Utawala",
+    "fee": 800
+  },
+  {
+    "id": "thika-road-juja-jkuat",
+    "corridor": "Thika Road",
+    "area": "Juja/JKUAT",
+    "fee": 1200
+  },
+  {
+    "id": "kiambu-road-quickmart",
+    "corridor": "Kiambu Road",
+    "area": "Quickmart",
+    "fee": 400
+  },
+  {
+    "id": "mombasa-road-enterprise-road",
+    "corridor": "Mombasa Road",
+    "area": "Enterprise Road",
+    "fee": 450
+  },
+  {
+    "id": "waiyaki-way-regen",
+    "corridor": "Waiyaki Way",
+    "area": "Regen",
+    "fee": 800
+  },
+  {
+    "id": "outer-ring-road-ruai",
+    "corridor": "Outer Ring Road",
+    "area": "Ruai",
+    "fee": 900
+  },
+  {
+    "id": "thika-road-mangu",
+    "corridor": "Thika Road",
+    "area": "Mangu",
+    "fee": 1300
+  },
+  {
+    "id": "kiambu-road-muthithi",
+    "corridor": "Kiambu Road",
+    "area": "Muthithi",
+    "fee": 400
+  },
+  {
+    "id": "mombasa-road-liberty-plaza",
+    "corridor": "Mombasa Road",
+    "area": "Liberty Plaza",
+    "fee": 500
+  },
+  {
+    "id": "waiyaki-way-gitaru",
+    "corridor": "Waiyaki Way",
+    "area": "Gitaru",
+    "fee": 900
+  },
+  {
+    "id": "outer-ring-road-githunguri-utaw",
+    "corridor": "Outer Ring Road",
+    "area": "Githunguri Utawala",
+    "fee": 900
+  },
+  {
+    "id": "thika-road-thika-road",
+    "corridor": "Thika Road",
+    "area": "THIKA ROAD",
+    "fee": 1400
+  },
+  {
+    "id": "kiambu-road-thindigua",
+    "corridor": "Kiambu Road",
+    "area": "Thindigua",
+    "fee": 500
+  },
+  {
+    "id": "mombasa-road-the-imaara-mall",
+    "corridor": "Mombasa Road",
+    "area": "The Imaara Mall",
+    "fee": 500
+  },
+  {
+    "id": "waiyaki-way-kikuyu-town",
+    "corridor": "Waiyaki Way",
+    "area": "Kikuyu Town",
+    "fee": 1000
+  },
+  {
+    "id": "outer-ring-road-kamulu",
+    "corridor": "Outer Ring Road",
+    "area": "Kamulu",
+    "fee": 1200
+  },
+  {
+    "id": "thika-road-makongeni-thika",
+    "corridor": "Thika Road",
+    "area": "Makongeni Thika",
+    "fee": 1700
+  },
+  {
+    "id": "kiambu-road-runda",
+    "corridor": "Kiambu Road",
+    "area": "Runda",
+    "fee": 600
+  },
+  {
+    "id": "mombasa-road-imara-daima",
+    "corridor": "Mombasa Road",
+    "area": "Imara Daima",
+    "fee": 500
+  },
+  {
+    "id": "waiyaki-way-gikambura-thog",
+    "corridor": "Waiyaki Way",
+    "area": "Gikambura/Thogoto",
+    "fee": 1200
+  },
+  {
+    "id": "kiambu-road-eden-ville",
+    "corridor": "Kiambu Road",
+    "area": "Eden Ville",
+    "fee": 600
+  },
+  {
+    "id": "mombasa-road-southfield-mall",
+    "corridor": "Mombasa Road",
+    "area": "Southfield Mall",
+    "fee": 500
+  },
+  {
+    "id": "kiambu-road-kirigiti",
+    "corridor": "Kiambu Road",
+    "area": "Kirigiti",
+    "fee": 800
+  },
+  {
+    "id": "mombasa-road-airport-north-roa",
+    "corridor": "Mombasa Road",
+    "area": "Airport North Road",
+    "fee": 500
+  },
+  {
+    "id": "langata-road-t-mall",
+    "corridor": "Langata Road",
+    "area": "T Mall",
+    "fee": 350
+  },
+  {
+    "id": "limuru-road-ojijo-road",
+    "corridor": "Limuru Road",
+    "area": "Ojijo Road",
+    "fee": 250
+  },
+  {
+    "id": "kiambu-road-kiambu-town",
+    "corridor": "Kiambu Road",
+    "area": "Kiambu Town",
+    "fee": 900
+  },
+  {
+    "id": "mombasa-road-jkia",
+    "corridor": "Mombasa Road",
+    "area": "JKIA",
+    "fee": 500
+  },
+  {
+    "id": "ngong-road-upper-hill-comm",
+    "corridor": "Ngong Road",
+    "area": "Upper Hill/Community",
+    "fee": 300
+  },
+  {
+    "id": "langata-road-madaraka",
+    "corridor": "Langata Road",
+    "area": "Madaraka",
+    "fee": 350
+  },
+  {
+    "id": "limuru-road-parklands",
+    "corridor": "Limuru Road",
+    "area": "Parklands",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-cabanas",
+    "corridor": "Mombasa Road",
+    "area": "Cabanas",
+    "fee": 500
+  },
+  {
+    "id": "ngong-road-knh",
+    "corridor": "Ngong Road",
+    "area": "KNH",
+    "fee": 350
+  },
+  {
+    "id": "langata-road-strathmore",
+    "corridor": "Langata Road",
+    "area": "Strathmore",
+    "fee": 350
+  },
+  {
+    "id": "limuru-road-mp-shah",
+    "corridor": "Limuru Road",
+    "area": "MP Shah",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-hilton-garden-in",
+    "corridor": "Mombasa Road",
+    "area": "Hilton Garden Inn",
+    "fee": 550
+  },
+  {
+    "id": "ngong-road-nairobi-hospital",
+    "corridor": "Ngong Road",
+    "area": "Nairobi Hospital",
+    "fee": 350
+  },
+  {
+    "id": "langata-road-mbagathi",
+    "corridor": "Langata Road",
+    "area": "Mbagathi",
+    "fee": 350
+  },
+  {
+    "id": "limuru-road-aga-khan",
+    "corridor": "Limuru Road",
+    "area": "Aga Khan",
+    "fee": 400
+  },
+  {
+    "id": "jogoo-road-city-stadium",
+    "corridor": "Jogoo Road",
+    "area": "City Stadium",
+    "fee": 300
+  },
+  {
+    "id": "mombasa-road-syokimau",
+    "corridor": "Mombasa Road",
+    "area": "Syokimau",
+    "fee": 600
+  },
+  {
+    "id": "ngong-road-hurlingham-kilin",
+    "corridor": "Ngong Road",
+    "area": "Hurlingham/Kilimani",
+    "fee": 400
+  },
+  {
+    "id": "langata-road-highrise",
+    "corridor": "Langata Road",
+    "area": "Highrise",
+    "fee": 350
+  },
+  {
+    "id": "limuru-road-oshwal",
+    "corridor": "Limuru Road",
+    "area": "Oshwal",
+    "fee": 400
+  },
+  {
+    "id": "jogoo-road-gikomba",
+    "corridor": "Jogoo Road",
+    "area": "Gikomba",
+    "fee": 250
+  },
+  {
+    "id": "mombasa-road-gatewall-mall",
+    "corridor": "Mombasa Road",
+    "area": "Gatewall Mall",
+    "fee": 600
+  },
+  {
+    "id": "ngong-road-kileleshwa",
+    "corridor": "Ngong Road",
+    "area": "Kileleshwa",
+    "fee": 400
+  },
+  {
+    "id": "langata-road-wilson-airport",
+    "corridor": "Langata Road",
+    "area": "Wilson Airport",
+    "fee": 400
+  },
+  {
+    "id": "limuru-road-mpaka-road",
+    "corridor": "Limuru Road",
+    "area": "Mpaka Road",
+    "fee": 350
+  },
+  {
+    "id": "jogoo-road-shauri-moyo",
+    "corridor": "Jogoo Road",
+    "area": "Shauri Moyo",
+    "fee": 300
+  },
+  {
+    "id": "mombasa-road-katani-road",
+    "corridor": "Mombasa Road",
+    "area": "Katani Road",
+    "fee": 650
+  },
+  {
+    "id": "ngong-road-lavington",
+    "corridor": "Ngong Road",
+    "area": "Lavington",
+    "fee": 500
+  },
+  {
+    "id": "langata-road-langata",
+    "corridor": "Langata Road",
+    "area": "Langata",
+    "fee": 400
+  },
+  {
+    "id": "limuru-road-unep-gigiri",
+    "corridor": "Limuru Road",
+    "area": "UNEP/Gigiri",
+    "fee": 600
+  },
+  {
+    "id": "jogoo-road-makadara",
+    "corridor": "Jogoo Road",
+    "area": "Makadara",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-mlolongo",
+    "corridor": "Mombasa Road",
+    "area": "Mlolongo",
+    "fee": 700
+  },
+  {
+    "id": "ngong-road-woodley-jam-es",
+    "corridor": "Ngong Road",
+    "area": "Woodley/Jam Es",
+    "fee": 400
+  },
+  {
+    "id": "langata-road-carnivore",
+    "corridor": "Langata Road",
+    "area": "Carnivore",
+    "fee": 450
+  },
+  {
+    "id": "limuru-road-village-market",
+    "corridor": "Limuru Road",
+    "area": "Village Market",
+    "fee": 650
+  },
+  {
+    "id": "jogoo-road-bahati",
+    "corridor": "Jogoo Road",
+    "area": "Bahati",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-signature-mall",
+    "corridor": "Mombasa Road",
+    "area": "Signature Mall",
+    "fee": 700
+  },
+  {
+    "id": "ngong-road-junction-mall",
+    "corridor": "Ngong Road",
+    "area": "Junction Mall",
+    "fee": 400
+  },
+  {
+    "id": "langata-road-pitstop",
+    "corridor": "Langata Road",
+    "area": "Pitstop",
+    "fee": 600
+  },
+  {
+    "id": "limuru-road-nyari",
+    "corridor": "Limuru Road",
+    "area": "Nyari",
+    "fee": 600
+  },
+  {
+    "id": "jogoo-road-makongeni",
+    "corridor": "Jogoo Road",
+    "area": "Makongeni",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-sabaki",
+    "corridor": "Mombasa Road",
+    "area": "Sabaki",
+    "fee": 700
+  },
+  {
+    "id": "ngong-road-adams-arcade",
+    "corridor": "Ngong Road",
+    "area": "Adams Arcade",
+    "fee": 350
+  },
+  {
+    "id": "langata-road-galleria",
+    "corridor": "Langata Road",
+    "area": "Galleria",
+    "fee": 600
+  },
+  {
+    "id": "limuru-road-gachie-wangige",
+    "corridor": "Limuru Road",
+    "area": "Gachie/Wangige",
+    "fee": 700
+  },
+  {
+    "id": "jogoo-road-mbotela",
+    "corridor": "Jogoo Road",
+    "area": "Mbotela",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-greatwall-garde",
+    "corridor": "Mombasa Road",
+    "area": "Greatwall Gardens",
+    "fee": 800
+  },
+  {
+    "id": "ngong-road-kibera-dagoreti",
+    "corridor": "Ngong Road",
+    "area": "Kibera/Dagoretti",
+    "fee": 500
+  },
+  {
+    "id": "langata-road-ongata-rongai",
+    "corridor": "Langata Road",
+    "area": "Ongata Rongai",
+    "fee": 1000
+  },
+  {
+    "id": "limuru-road-ruaka",
+    "corridor": "Limuru Road",
+    "area": "Ruaka",
+    "fee": 700
+  },
+  {
+    "id": "jogoo-road-hamza",
+    "corridor": "Jogoo Road",
+    "area": "Hamza",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-athi-river-shalo",
+    "corridor": "Mombasa Road",
+    "area": "Athi River Shalo",
+    "fee": 850
+  },
+  {
+    "id": "ngong-road-kawangware",
+    "corridor": "Ngong Road",
+    "area": "Kawangware",
+    "fee": 500
+  },
+  {
+    "id": "langata-road-kiserian",
+    "corridor": "Langata Road",
+    "area": "Kiserian",
+    "fee": 1200
+  },
+  {
+    "id": "limuru-road-mucatha",
+    "corridor": "Limuru Road",
+    "area": "Mucatha",
+    "fee": 700
+  },
+  {
+    "id": "jogoo-road-lumumba-jerich",
+    "corridor": "Jogoo Road",
+    "area": "Lumumba/Jericho",
+    "fee": 350
+  },
+  {
+    "id": "mombasa-road-mutungoni-road",
+    "corridor": "Mombasa Road",
+    "area": "Mutungoni Road",
+    "fee": 900
+  },
+  {
+    "id": "ngong-road-wanyee-dagore",
+    "corridor": "Ngong Road",
+    "area": "Wanyee/Dagore",
+    "fee": 600
+  },
+  {
+    "id": "limuru-road-ndenderu",
+    "corridor": "Limuru Road",
+    "area": "Ndenderu",
+    "fee": 800
+  },
+  {
+    "id": "mombasa-road-epz-road",
+    "corridor": "Mombasa Road",
+    "area": "EPZ Road",
+    "fee": 1000
+  },
+  {
+    "id": "ngong-road-karen-racerac",
+    "corridor": "Ngong Road",
+    "area": "Karen/RaceRac",
+    "fee": 800
+  },
+  {
+    "id": "limuru-road-limuru-town",
+    "corridor": "Limuru Road",
+    "area": "Limuru Town",
+    "fee": 1200
+  },
+  {
+    "id": "mombasa-road-kitengela",
+    "corridor": "Mombasa Road",
+    "area": "Kitengela",
+    "fee": 1200
+  },
+  {
+    "id": "ngong-road-embulbul-kerar",
+    "corridor": "Ngong Road",
+    "area": "Embulbul/Kerarapon",
+    "fee": 900
+  },
+  {
+    "id": "ngong-road-ngong-town",
+    "corridor": "Ngong Road",
+    "area": "Ngong Town",
+    "fee": 1000
+  },
+  {
+    "id": "mombasa-road-south-field-mall",
+    "corridor": "Mombasa Road",
+    "area": "South Field Mall",
+    "fee": 500
+  },
+  {
+    "id": "ngong-road-matasia",
+    "corridor": "Ngong Road",
+    "area": "Matasia",
+    "fee": 1200
+  },
+  {
+    "id": "mombasa-road-gatewall-mall-sy",
+    "corridor": "Mombasa Road",
+    "area": "Gateway Mall/Syokimau",
+    "fee": 600
+  },
+  {
+    "id": "mombasa-road-katani-67-airport",
+    "corridor": "Mombasa Road",
+    "area": "Katani/67 Airport",
+    "fee": 700
+  },
+  {
+    "id": "mombasa-road-panari-airtel",
+    "corridor": "Mombasa Road",
+    "area": "Panari/Airtel",
+    "fee": 500
+  },
+  {
+    "id": "mombasa-road-mlolongo-sabaki",
+    "corridor": "Mombasa Road",
+    "area": "Mlolongo/Sabaki",
+    "fee": 800
+  },
+  {
+    "id": "mombasa-road-athi-river",
+    "corridor": "Mombasa Road",
+    "area": "Athi River",
+    "fee": 1200
+  }
+]
