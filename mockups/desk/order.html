@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PM-10001 · Photon desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/desk.css">
+</head>
+<body data-root="..">
+  <aside class="side" id="side"></aside>
+  <main class="main" id="main"></main>
+  <script src="../js/store.js"></script>
+  <script>
+    if (!Photon.order()) location.href = "index.html";
+    const o = Photon.order();
+    document.getElementById("side").innerHTML = `
+      <div class="brand">${Photon.mark()}<span><strong>Photon</strong><small>Desk</small></span></div>
+      <nav class="nav">
+        <a href="index.html">Orders</a>
+        <a class="is-on" href="order.html">PM-10001</a>
+        <a>Catalog</a>
+        <a>Payments</a>
+      </nav>
+      <div class="foot"><a href="../track.html">Customer tracking</a></div>`;
+
+    const draw = () => {
+      const cur = Photon.order();
+      document.getElementById("main").innerHTML = `
+        <p class="sub"><a href="index.html">Orders</a> / ${cur.number}</p>
+        <h1>${cur.number}</h1>
+        <p class="sub">${cur.name} · ${cur.phone} · ${cur.pay} ${cur.ref}</p>
+        <div class="detail">
+          <div class="panel">
+            <h2>Items</h2>
+            <div class="line">
+              <img src="${Photon.img(cur.item.img)}" alt="">
+              <div>${cur.item.name}<br><span style="color:var(--muted)">${cur.item.size} · Qty ${cur.item.qty}</span></div>
+              <div>${Photon.kes(cur.item.price * cur.item.qty)}</div>
+            </div>
+            <p>${cur.method === "collect" ? "Collection, Parklands" : "Deliver to " + cur.address}</p>
+            <p>Delivery ${Photon.kes(cur.fee)} · Total ${Photon.kes(cur.total)}</p>
+            <p style="color:var(--muted)">Stock drops only after this payment. 1 × King held from the Rift set.</p>
+          </div>
+          <div class="panel">
+            <h2>Move the order</h2>
+            <select id="status">${Photon.STATUSES.map(s =>
+              `<option value="${s.id}" ${s.id === cur.status ? "selected" : ""}>${s.label}</option>`
+            ).join("")}</select>
+            <button class="btn" id="save">Save status</button>
+            <p class="note" id="note">The customer sees this on tracking as soon as you save.</p>
+          </div>
+        </div>`;
+      document.getElementById("save").onclick = () => {
+        const status = document.getElementById("status").value;
+        Photon.setOrder({ ...Photon.order(), status, paidAt: "Just now" });
+        document.getElementById("note").textContent = "Saved. Open customer tracking to see “" +
+          Photon.STATUSES.find(s => s.id === status).label + "”.";
+      };
+    };
+    draw();
+  </script>
+</body>
+</html>

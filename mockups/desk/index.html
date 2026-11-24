@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orders · Photon desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/desk.css">
+</head>
+<body data-root="..">
+  <aside class="side" id="side"></aside>
+  <main class="main">
+    <h1>Orders</h1>
+    <p class="sub">Today in Parklands</p>
+    <div class="stats">
+      <div class="stat"><span>Paid today</span><b>KES 41,040</b></div>
+      <div class="stat"><span>To pack</span><b>3</b></div>
+      <div class="stat"><span>Out for delivery</span><b>1</b></div>
+      <div class="stat"><span>Low stock</span><b>2</b></div>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Order</th><th>Customer</th><th>Item</th><th>Total</th><th>Pay</th><th>Status</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </main>
+  <script src="../js/store.js"></script>
+  <script>
+    const seed = () => {
+      if (!Photon.order()) {
+        const p = Photon.product("rift-duvet");
+        Photon.setOrder({
+          number: "PM-10001",
+          status: "paid",
+          paidAt: "Today, 6:12 pm",
+          total: 9250,
+          fee: 350,
+          method: "delivery",
+          area: "westlands",
+          address: "12 School Lane, Westlands",
+          name: "Amina Otieno",
+          phone: "0741 220 118",
+          pay: "M-Pesa",
+          ref: "PSK-8F2C19",
+          item: { id: p.id, name: p.name, size: "King", qty: 1, img: p.img, price: p.price },
+        });
+      }
+    };
+    seed();
+    const o = Photon.order();
+    const statusLabel = (id) => Photon.STATUSES.find(s => s.id === id)?.label || id;
+    document.getElementById("side").innerHTML = `
+      <div class="brand">${Photon.mark()}<span><strong>Photon</strong><small>Desk</small></span></div>
+      <nav class="nav">
+        <a class="is-on" href="index.html">Orders</a>
+        <a href="order.html">PM-10001</a>
+        <a>Catalog</a>
+        <a>Payments</a>
+      </nav>
+      <div class="foot"><a href="../index.html">Open the shop</a></div>`;
+    const extras = [
+      { n: "PM-10000", who: "James Kariuki", item: "Copper Kettle 1.7L", total: "KES 3,240", pay: "Card", status: "Out for delivery", cls: "" },
+      { n: "PM-09998", who: "Faith Wanjiku", item: "Safari Chef Blender", total: "KES 6,750", pay: "M-Pesa", status: "Delivered", cls: "paid" },
+    ];
+    document.getElementById("rows").innerHTML = `
+      <tr class="clickable" onclick="location.href='order.html'">
+        <td><b>${o.number}</b></td>
+        <td>${o.name}<br><span style="color:var(--muted)">${o.phone}</span></td>
+        <td>${o.item.name}</td>
+        <td>${Photon.kes(o.total)}</td>
+        <td>${o.pay}</td>
+        <td><span class="status paid">${statusLabel(o.status)}</span></td>
+      </tr>
+      ${extras.map(r => `<tr>
+        <td>${r.n}</td><td>${r.who}</td><td>${r.item}</td><td>${r.total}</td><td>${r.pay}</td>
+        <td><span class="status ${r.cls}">${r.status}</span></td>
+      </tr>`).join("")}`;
+  </script>
+</body>
+</html>

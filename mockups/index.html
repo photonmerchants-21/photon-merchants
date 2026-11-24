@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photon Merchants</title>
+  <!-- restore 2026-10-21 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body data-root=".">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="chrome-header"></div>
+  <main id="main">
+    <section class="hero">
+      <img src="img/hero-bedroom.jpg" alt="Oat linen bedding in late afternoon light">
+      <div class="hero-scrim"></div>
+      <div class="hero-copy">
+        <p class="kicker">This week’s light</p>
+        <h1>Linen, ready for the rains</h1>
+        <p>The Rift duvet set in oat and terracotta. King or Queen, from our Parklands shop to your gate.</p>
+        <a class="btn btn-gold" href="product.html?id=rift-duvet">Shop the set <span class="hero-price">KES 8,900</span></a>
+      </div>
+    </section>
+    <div class="trust">
+      <div><b>Pay on the phone</b>M-Pesa prompt, or a debit card</div>
+      <div><b>Nairobi delivery</b>Westlands, Parklands, CBD, Kilimani, Eastlands</div>
+      <div><b>Or collect</b>Ring Road, Parklands · 8:30–18:00</div>
+    </div>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Shop by room</h2>
+      </div>
+      <div class="cat-tiles">
+        <a class="tile" href="category.html?c=beddings">
+          <img src="img/duvet-set.jpg" alt="">
+          <span><p class="kicker">Sleep</p><strong>Beddings</strong></span>
+        </a>
+        <a class="tile" href="category.html?c=kitchenware">
+          <img src="img/kitchen-scene.jpg" alt="">
+          <span><p class="kicker">Cook</p><strong>Kitchenware</strong></span>
+        </a>
+        <a class="tile" href="category.html?c=electronics">
+          <img src="img/smart-tv.jpg" alt="">
+          <span><p class="kicker">Light and sound</p><strong>Electronics</strong></span>
+        </a>
+      </div>
+    </div>
+    <div class="wrap" id="offers">
+      <div class="section-head">
+        <h2>On offer</h2>
+        <a href="category.html?c=beddings">See beddings</a>
+      </div>
+      <div class="grid" id="offers-grid"></div>
+    </div>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>New in</h2>
+      </div>
+      <div class="rail" id="new-rail"></div>
+    </div>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Best sellers</h2>
+      </div>
+      <div class="grid" id="best-grid"></div>
+    </div>
+  </main>
+  <div id="chrome-footer"></div>
+  <script src="js/store.js"></script>
+  <script>
+    Photon.chrome("home");
+    const bySold = [...Photon.PRODUCTS].sort((a, b) => b.sold - a.sold);
+    document.getElementById("offers-grid").innerHTML = Photon.PRODUCTS.filter(p => p.sale).map(Photon.card).join("");
+    document.getElementById("new-rail").innerHTML = Photon.PRODUCTS.filter(p => p.newest).map(Photon.card).join("");
+    document.getElementById("best-grid").innerHTML = bySold.slice(0, 4).map(Photon.card).join("");
+  </script>
+</body>
+</html>

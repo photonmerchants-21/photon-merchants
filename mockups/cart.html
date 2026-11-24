@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bag · Photon Merchants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body data-root=".">
+  <div id="chrome-header"></div>
+  <main class="wrap" id="main"></main>
+  <div id="chrome-footer"></div>
+  <script src="js/store.js"></script>
+  <script>
+    Photon.chrome("cart");
+    const draw = () => {
+      const items = Photon.cart();
+      if (!items.length) {
+        document.getElementById("main").innerHTML = `
+          <h1 class="page-title">Your bag</h1>
+          <div class="empty">
+            <p>Nothing in the bag yet.</p>
+            <a class="btn btn-gold" href="product.html?id=rift-duvet">Shop the Rift set</a>
+          </div>`;
+        return;
+      }
+      const sub = Photon.cartTotal();
+      document.getElementById("main").innerHTML = `
+        <h1 class="page-title">Your bag</h1>
+        <div class="cart-layout">
+          <div>${items.map((line, i) => {
+            const p = Photon.product(line.id);
+            return `<div class="line">
+              <img src="${Photon.img(p.img)}" alt="">
+              <div>
+                <h3>${p.name}</h3>
+                <p style="color:var(--muted);margin:0 0 8px">${line.size || p.catLabel}</p>
+                <div class="qty">
+                  <button data-d="-1" data-i="${i}">−</button>
+                  <span>${line.qty}</span>
+                  <button data-d="1" data-i="${i}">+</button>
+                </div>
+              </div>
+              <div>
+                <b>${Photon.kes(p.price * line.qty)}</b><br>
+                <button data-x="${i}" style="border:0;background:none;color:var(--muted);margin-top:8px">Remove</button>
+              </div>
+            </div>`;
+          }).join("")}</div>
+          <aside class="summary">
+            <h2>Total before payment</h2>
+            <div class="row"><span>Subtotal</span><span>${Photon.kes(sub)}</span></div>
+            <div class="row"><span>Delivery</span><span>Chosen at checkout</span></div>
+            <div class="row total"><span>To pay later</span><span>${Photon.kes(sub)}</span></div>
+            <a class="btn btn-gold btn-block" href="checkout.html">Checkout</a>
+          </aside>
+        </div>`;
+      document.querySelectorAll("[data-d]").forEach(btn => {
+        btn.onclick = () => {
+          const next = Photon.cart();
+          const i = Number(btn.dataset.i);
+          next[i].qty = Math.max(1, next[i].qty + Number(btn.dataset.d));
+          Photon.setCart(next);
+          draw();
+        };
+      });
+      document.querySelectorAll("[data-x]").forEach(btn => {
+        btn.onclick = () => {
+          const next = Photon.cart().filter((_, i) => i !== Number(btn.dataset.x));
+          Photon.setCart(next);
+          draw();
+        };
+      });
+    };
+    draw();
+  </script>
+</body>
+</html>

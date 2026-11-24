@@ -1,0 +1,9 @@
+.DS_Store
+backups/
+*.dump
+.env
+.env.local
+.photon-last-reset-url
+node_modules/
+.next/
+.medusa/

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout · Photon Merchants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body data-root=".">
+  <div id="chrome-header"></div>
+  <main class="wrap" id="main"></main>
+  <div id="chrome-footer"></div>
+  <script src="js/store.js"></script>
+  <script>
+    Photon.chrome("cart");
+    if (!Photon.cart().length) location.href = "cart.html";
+    const c = Photon.checkout();
+
+    const draw = () => {
+      const method = document.querySelector("[name=method]:checked")?.value || c.method;
+      const areaId = document.getElementById("area")?.value || c.area;
+      const area = Photon.AREAS.find(a => a.id === areaId) || Photon.AREAS[1];
+      const fee = method === "collect" ? 0 : area.fee;
+      const sub = Photon.cartTotal();
+      const total = sub + fee;
+      document.getElementById("sum-del").textContent = fee ? Photon.kes(fee) : "Free collection";
+      document.getElementById("sum-total").textContent = Photon.kes(total);
+      document.getElementById("addr-block").hidden = method === "collect";
+      document.querySelectorAll(".choice label").forEach(l => {
+        l.classList.toggle("is-on", l.querySelector("input").checked);
+      });
+    };
+
+    document.getElementById("main").innerHTML = `
+      <h1 class="page-title">Checkout</h1>
+      <p style="color:var(--muted);margin:0 0 18px">Guest checkout. You can save an account after payment.</p>
+      <div class="check-layout">
+        <form class="form" id="form">
+          <label>Full name<input name="name" value="${c.name}" required></label>
+          <label>Phone<input name="phone" value="${c.phone}" required></label>
+          <label>Email<input name="email" type="email" value="${c.email}"></label>
+          <p class="kicker">How should we send it?</p>
+          <div class="choice">
+            <label class="is-on"><input type="radio" name="method" value="delivery" ${c.method !== "collect" ? "checked" : ""}> Delivery to your gate <span id="fee-hint"></span></label>
+            <label><input type="radio" name="method" value="collect" ${c.method === "collect" ? "checked" : ""}> Collect from Parklands <span>Free</span></label>
+          </div>
+          <div id="addr-block">
+            <label>Area
+              <select name="area" id="area">${Photon.AREAS.map(a =>
+                `<option value="${a.id}" ${a.id === c.area ? "selected" : ""}>${a.label} · ${Photon.kes(a.fee)}</option>`
+              ).join("")}</select>
+            </label>
+            <label>Street and building<textarea name="address" rows="3">${c.address}</textarea></label>
+          </div>
+          <button class="btn btn-gold" type="submit">Continue to payment</button>
+        </form>
+        <aside class="summary">
+          <h2>Order</h2>
+          ${Photon.cart().map(line => {
+            const p = Photon.product(line.id);
+            return `<div class="row"><span>${p.name}${line.size ? " · " + line.size : ""} × ${line.qty}</span><span>${Photon.kes(p.price * line.qty)}</span></div>`;
+          }).join("")}
+          <div class="row"><span>Delivery</span><span id="sum-del"></span></div>
+          <div class="row total"><span>Total</span><span id="sum-total"></span></div>
+        </aside>
+      </div>`;
+
+    document.getElementById("form").addEventListener("input", draw);
+    document.getElementById("form").onsubmit = (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const method = fd.get("method");
+      const area = Photon.AREAS.find(a => a.id === fd.get("area"));
+      const fee = method === "collect" ? 0 : area.fee;
+      Photon.setCheckout({
+        name: fd.get("name"),
+        phone: fd.get("phone"),
+        email: fd.get("email"),
+        method,
+        area: fd.get("area"),
+        address: fd.get("address"),
+        fee,
+        total: Photon.cartTotal() + fee,
+      });
+      location.href = "pay.html";
+    };
+    draw();
+  </script>
+</body>
+</html>

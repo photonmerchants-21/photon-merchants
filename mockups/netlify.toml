@@ -1,0 +1,7 @@
+# Static shop preview. Do not set a publish folder other than the site root.
+# A publish path of "mockups" or "dist" will go live as a blank page.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track order · Photon Merchants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body data-root=".">
+  <div id="chrome-header"></div>
+  <main class="wrap" id="main"></main>
+  <div id="chrome-footer"></div>
+  <script src="js/store.js"></script>
+  <script>
+    Photon.chrome("track");
+    const o = Photon.order();
+    const idx = o ? Photon.STATUSES.findIndex(s => s.id === o.status) : -1;
+    if (!o) {
+      document.getElementById("main").innerHTML = `
+        <h1 class="page-title">Track an order</h1>
+        <form class="form" style="max-width:420px" onsubmit="event.preventDefault();location.href='track.html'">
+          <label>Order number<input placeholder="PM-10001"></label>
+          <label>Phone<input placeholder="07.."></label>
+          <button class="btn btn-gold" type="submit">Look up</button>
+          <p style="color:var(--muted)">Place an order in this preview to see tracking fill in.</p>
+        </form>`;
+    } else {
+      document.getElementById("main").innerHTML = `
+        <p class="kicker">${o.number}</p>
+        <h1 class="page-title">${Photon.STATUSES[idx]?.label || "Order"}</h1>
+        <p style="color:var(--muted);margin-top:0">${o.item.name}${o.item.size ? " · " + o.item.size : ""} · ${Photon.kes(o.total)}</p>
+        <div class="cart-layout">
+          <ol class="timeline">
+            ${Photon.STATUSES.map((s, i) => `
+              <li class="${i < idx ? "done" : i === idx ? "now" : ""}">
+                <span class="n"></span>
+                <div>${s.label}${i === idx ? "<small>Updated " + o.paidAt + "</small>" : ""}</div>
+              </li>`).join("")}
+          </ol>
+          <aside class="summary">
+            <h2>${o.method === "collect" ? "Collection" : "Delivery"}</h2>
+            <p>${o.name}<br>${o.phone}<br>${o.method === "collect" ? "Ring Road, Parklands" : o.address}</p>
+            <p style="color:var(--muted)">Pay ${o.pay} · ${o.ref}</p>
+            <img src="${Photon.img(o.item.img)}" alt="" style="border-radius:12px;margin-top:8px">
+          </aside>
+        </div>`;
+    }
+  </script>
+</body>
+</html>

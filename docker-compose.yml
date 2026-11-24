@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: photon-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: photon
+      POSTGRES_PASSWORD: photon
+      POSTGRES_DB: photon_medusa
+    volumes:
+      - photon_pg:/var/lib/postgresql/data
+
+volumes:
+  photon_pg:

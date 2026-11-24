@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order confirmed · Photon Merchants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body data-root=".">
+  <div id="chrome-header"></div>
+  <main class="wrap">
+    <div class="success">
+      <p class="kicker">Payment confirmed</p>
+      <h1>It’s yours.</h1>
+      <p>We’ll pack it in Parklands and send a note when it leaves the shop.</p>
+      <p class="orderno" id="no">PM-10001</p>
+      <p style="color:var(--muted)" id="meta"></p>
+      <p>
+        <a class="btn btn-gold" href="track.html">Track this order</a>
+        <a class="btn btn-ghost" href="index.html" style="margin-left:8px">Back to the shop</a>
+      </p>
+    </div>
+  </main>
+  <div id="chrome-footer"></div>
+  <script src="js/store.js"></script>
+  <script>
+    Photon.chrome("track");
+    const o = Photon.order();
+    if (o) {
+      document.getElementById("no").textContent = o.number;
+      document.getElementById("meta").textContent =
+        Photon.kes(o.total) + " · " + o.pay + " · " + (o.item ? o.item.name : "");
+    }
+  </script>
+</body>
+</html>

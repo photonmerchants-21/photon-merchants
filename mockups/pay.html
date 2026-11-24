@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pay · Photon Merchants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body data-root=".">
+  <div id="chrome-header"></div>
+  <main class="wrap" id="main"></main>
+  <div id="chrome-footer"></div>
+  <script src="js/store.js"></script>
+  <script>
+    Photon.chrome("cart");
+    const c = Photon.checkout();
+    const total = c.total || Photon.cartTotal();
+    let pin = "";
+
+    const finish = () => {
+      const first = Photon.cart()[0];
+      const p = first ? Photon.product(first.id) : Photon.product("rift-duvet");
+      Photon.setOrder({
+        number: "PM-10001",
+        status: "paid",
+        paidAt: "Today, 6:12 pm",
+        total,
+        fee: c.fee || 0,
+        method: c.method || "delivery",
+        area: c.area,
+        address: c.address,
+        name: c.name,
+        phone: c.phone,
+        pay: "M-Pesa",
+        ref: "PSK-8F2C19",
+        item: { id: p.id, name: p.name, size: first?.size || "King", qty: first?.qty || 1, img: p.img, price: p.price },
+      });
+      Photon.setCart([]);
+      location.href = "success.html";
+    };
+
+    const paint = (step) => {
+      if (step === "pin") {
+        document.getElementById("main").innerHTML = `
+          <div class="pay-card">
+            <p class="kicker">M-Pesa prompt sent</p>
+            <h1>Enter PIN</h1>
+            <p style="color:var(--muted)">A prompt went to ${c.phone}. Enter the M-Pesa PIN on this phone to pay ${Photon.kes(total)} to Photon Merchants.</p>
+            <div class="pin" id="dots">${"<i></i>".repeat(4)}</div>
+            <div class="keypad" id="keys">
+              ${[1,2,3,4,5,6,7,8,9,"",0,"⌫"].map(k => `<button type="button" data-k="${k}">${k}</button>`).join("")}
+            </div>
+            <p style="color:var(--muted);font-size:13px;margin-top:16px">Any four digits complete this preview.</p>
+          </div>`;
+        const sync = () => {
+          [...document.querySelectorAll("#dots i")].forEach((el, i) => el.classList.toggle("on", i < pin.length));
+          if (pin.length === 4) setTimeout(finish, 350);
+        };
+        document.getElementById("keys").onclick = (e) => {
+          const k = e.target.dataset.k;
+          if (k === undefined || k === "") return;
+          if (k === "⌫") pin = pin.slice(0, -1);
+          else if (pin.length < 4) pin += String(k);
+          sync();
+        };
+        return;
+      }
+      document.getElementById("main").innerHTML = `
+        <div class="pay-card">
+          <div class="mpesa-mark"><span class="dot"></span> Pay with M-Pesa</div>
+          <h1>${Photon.kes(total)}</h1>
+          <p style="color:var(--muted);margin-top:0">Photon Merchants · ${c.method === "collect" ? "Collection, Parklands" : "Delivery"}</p>
+          <form class="form" id="payform">
+            <label>M-Pesa number<input name="phone" value="${c.phone || ""}" required></label>
+            <button class="btn btn-gold btn-block" type="submit">Send payment prompt</button>
+          </form>
+          <p style="text-align:center;margin:18px 0 8px;color:var(--muted)">or</p>
+          <button class="btn btn-ghost btn-block" id="card" type="button">Pay with debit or credit card</button>
+        </div>`;
+      document.getElementById("payform").onsubmit = (e) => {
+        e.preventDefault();
+        pin = "";
+        paint("pin");
+      };
+      document.getElementById("card").onclick = () => {
+        document.getElementById("main").innerHTML = `
+          <div class="pay-card">
+            <p class="kicker">Card</p>
+            <h1>${Photon.kes(total)}</h1>
+            <form class="form" id="cardform">
+              <label>Name on card<input value="${c.name}" required></label>
+              <label>Card number<input value="4187 3500 2219 4410" required></label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                <label>Expiry<input value="08 / 28" required></label>
+                <label>CVC<input value="123" required></label>
+              </div>
+              <button class="btn btn-gold btn-block" type="submit">Pay ${Photon.kes(total)}</button>
+            </form>
+          </div>`;
+        document.getElementById("cardform").onsubmit = (e) => { e.preventDefault(); finish(); };
+      };
+    };
+    paint("start");
+  </script>
+</body>
+</html>
