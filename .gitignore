@@ -7,3 +7,9 @@ backups/
 node_modules/
 .next/
 .medusa/
+
+# Client documents (keep local, never commit)
+/*.docx
+/*.pages
+/*.xlsx
+/*.pdf
